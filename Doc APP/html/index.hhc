@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Packages"><param name="Local" value="namespaces.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Package List"><param name="Local" value="namespaces.html#top"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments"><param name="Local" value="namespace_media_tek_documents.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="controller"><param name="Local" value="namespace_media_tek_documents_1_1controller.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekController"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekController"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a72ed2400f576d1bef7c7b4621421c8a7"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddAbonnement"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a8998a139b4f3c3fdc258b05d1f809991"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommande"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a403cfe4d2496d3d15e8ce0eb8c709bfd"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommandeDocument"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ab4ad17426fd70f4e67092930d7b0957b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CreerExemplaire"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a38b26e0f8357c7b9539e974fb0496c4f"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllAbonnements"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac6252666f48aa3baa9cdb08852925eb8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocuments"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aafb346b4acc66de459178fa663457aa2"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsDvd"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a06e5409ad76610c63dd5c0486061744b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsLivre"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a8e1f3c20410638790eb0bb3d492db4f3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllDvd"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aff6798b4a3a7fb18d9515fdb0f8807c9"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllGenres"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac9f6171c5f481a949bea961a54b4d260"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllLivres"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a31259a00ffb53bd05653dc1b5d2d041b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllPublics"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#abab41748fe20336499dd3fc8bd29c3a2"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRayons"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aa080a5d10b7b7da29e376ce0057629cf"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRevues"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a3e54e8336581d07c393569ee4625c80c"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllStatus"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a80828b07a08307866fd4b92c18f8ffaa"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetExemplairesRevue"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ab1479bd8f2c34a9db73010c1e96edff1"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetIdCommande"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac344fd0a6598ecd6f85d874c24904f16"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetOrderCount"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a6cf0413bf0501cd5cd2b0c60647b4faf"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetStatus"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aacd9b835daa24e5436abe83c3a08b250"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="parutionDansAbonnement"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a9d7ddd7eb00a4dd56c1ff318165e5fb7"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveAbonnementById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aee3cf28a47e558f8b48e6822f17b6045"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveCommandeById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a5b8f5861006953d49992facbfc354b3a"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveCommandeDocumentById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a85604b9738cca9351bfab4cff0f52ecc"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveDocumentById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac376f4e2c0be7a5a13d42b940702a11a"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrder"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a557049e59dbd27375d43b51fa26fbd54"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrderRevue"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a2d7dcefc1722677fb0f7f8ff8da425b8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="updateOrderStatus"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aabbfe9157de29fb8eb9a1623baae90b9"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekControllerLogin"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller_login.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekControllerLogin"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller_login.html#ac512a4729ec458b69108b9e70443616b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="checkLogin"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller_login.html#a1da6df7926e0ab9d3dd20404843f5d84"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dal"><param name="Local" value="namespace_media_tek_documents_1_1dal.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Access"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddAbonnement"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#afa42ad191c28898366bbd8fcadce9e76"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommande"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a9fe77b6cf4163bb7f2808bd10ec9de6c"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommandeDocument"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ad3208650a4b214110dbb12fe6d4c6018"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CreerExemplaire"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a49b41a152a85598907cd41f50681dbe8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllAbonnements"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ac05514ddc62fb86b8bf1619e88799ede"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocuments"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ac1c46121f8fda69f65049aad6afa072b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsDvd"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a5b5ce48aa508ef4a47e41ecc91c976b6"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsLivre"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ac6041f1cd54bb763e9d08dea24ed71df"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllDvd"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ad6e141fb3c8c28d381a62c76807f5f88"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllGenres"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a3c8e1bbfaf3e0332d27a69b3508c795d"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllLivres"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#adb24fd5f8c6c4db3ad86fee64cc95ad1"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllPublics"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#aa666fcd51e2dd4ab7feff1271bc8daf5"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRayons"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#abb34414355a628dd16b5f35876cf39e8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRevues"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#af878e9be72359a411c8c1ca458dedbe6"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllStatus"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#af07578d35204ca9fd9479fe0c2bd2fb6"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetExemplairesRevue"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a8a22be0e93431c4462287ad25085e6e3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetIdCommande"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a6f83bb5d50a5e54115483d558a8d96f0"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetOrderCount"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#af8afbda019bb90a701cd397026b0cb8d"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetStatus"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a9f1d808492c23e621f973ecc9b8a97c1"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="parutionDansAbonnement"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ad2baac1c46b58c1465a01e48337e3218"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveCommandeDocumentById"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ae4ba2e3d08a23b14a13f19deeebe9282"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveDocumentById"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a57d748a8601de3e992048bea93477437"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SearchExemplaire"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a7923bc5f818b4202b21830683dd6bf41"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrder"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a66d970cb67c0f06d420551a35dfc4f64"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrderRevue"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a70cdc5361b1f092b723accae1dc4c050"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="updateOrderStatus"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#aabedae67b2d7ebd6eccb340b55869d60"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="manager"><param name="Local" value="namespace_media_tek_documents_1_1manager.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ApiRest"><param name="Local" value="class_media_tek_documents_1_1manager_1_1_api_rest.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="RecupDistant"><param name="Local" value="class_media_tek_documents_1_1manager_1_1_api_rest.html#ac66e7d97916346183ea90b62a3cc99d2"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="model"><param name="Local" value="namespace_media_tek_documents_1_1model.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Abonnement"><param name="Local" value="class_media_tek_documents_1_1model_1_1_abonnement.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Categorie"><param name="Local" value="class_media_tek_documents_1_1model_1_1_categorie.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="ToString"><param name="Local" value="class_media_tek_documents_1_1model_1_1_categorie.html#aa127da14b5715971b9f296cfefa105fb"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Commande"><param name="Local" value="class_media_tek_documents_1_1model_1_1_commande.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="CommandeDocument"><param name="Local" value="class_media_tek_documents_1_1model_1_1_commande_document.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Document"><param name="Local" value="class_media_tek_documents_1_1model_1_1_document.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Dvd"><param name="Local" value="class_media_tek_documents_1_1model_1_1_dvd.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Etat"><param name="Local" value="class_media_tek_documents_1_1model_1_1_etat.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Exemplaire"><param name="Local" value="class_media_tek_documents_1_1model_1_1_exemplaire.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Genre"><param name="Local" value="class_media_tek_documents_1_1model_1_1_genre.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Livre"><param name="Local" value="class_media_tek_documents_1_1model_1_1_livre.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="LivreDvd"><param name="Local" value="class_media_tek_documents_1_1model_1_1_livre_dvd.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Public"><param name="Local" value="class_media_tek_documents_1_1model_1_1_public.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Rayon"><param name="Local" value="class_media_tek_documents_1_1model_1_1_rayon.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Revue"><param name="Local" value="class_media_tek_documents_1_1model_1_1_revue.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Suivi"><param name="Local" value="class_media_tek_documents_1_1model_1_1_suivi.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Utilisateur"><param name="Local" value="class_media_tek_documents_1_1model_1_1_utilisateur.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Properties"><param name="Local" value="namespace_media_tek_documents_1_1_properties.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="view"><param name="Local" value="namespace_media_tek_documents_1_1view.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatek"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Dispose"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek.html#ad165810ce498739484943e2f0db5a6d3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="RemplirComboCategorie"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek.html#a62b280a0c2bba8a8601931cc347ba162"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekLogin"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek_login.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Dispose"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek_login.html#a11f41ad18071f9864c2b754df7a2474c"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Classes"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html#top"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments"><param name="Local" value="namespace_media_tek_documents.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="controller"><param name="Local" value="namespace_media_tek_documents_1_1controller.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekController"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekController"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a72ed2400f576d1bef7c7b4621421c8a7"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddAbonnement"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a8998a139b4f3c3fdc258b05d1f809991"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommande"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a403cfe4d2496d3d15e8ce0eb8c709bfd"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommandeDocument"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ab4ad17426fd70f4e67092930d7b0957b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CreerExemplaire"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a38b26e0f8357c7b9539e974fb0496c4f"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllAbonnements"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac6252666f48aa3baa9cdb08852925eb8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocuments"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aafb346b4acc66de459178fa663457aa2"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsDvd"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a06e5409ad76610c63dd5c0486061744b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsLivre"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a8e1f3c20410638790eb0bb3d492db4f3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllDvd"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aff6798b4a3a7fb18d9515fdb0f8807c9"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllGenres"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac9f6171c5f481a949bea961a54b4d260"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllLivres"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a31259a00ffb53bd05653dc1b5d2d041b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllPublics"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#abab41748fe20336499dd3fc8bd29c3a2"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRayons"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aa080a5d10b7b7da29e376ce0057629cf"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRevues"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a3e54e8336581d07c393569ee4625c80c"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllStatus"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a80828b07a08307866fd4b92c18f8ffaa"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetExemplairesRevue"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ab1479bd8f2c34a9db73010c1e96edff1"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetIdCommande"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac344fd0a6598ecd6f85d874c24904f16"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetOrderCount"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a6cf0413bf0501cd5cd2b0c60647b4faf"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetStatus"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aacd9b835daa24e5436abe83c3a08b250"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="parutionDansAbonnement"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a9d7ddd7eb00a4dd56c1ff318165e5fb7"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveAbonnementById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aee3cf28a47e558f8b48e6822f17b6045"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveCommandeById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a5b8f5861006953d49992facbfc354b3a"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveCommandeDocumentById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a85604b9738cca9351bfab4cff0f52ecc"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveDocumentById"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#ac376f4e2c0be7a5a13d42b940702a11a"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrder"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a557049e59dbd27375d43b51fa26fbd54"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrderRevue"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#a2d7dcefc1722677fb0f7f8ff8da425b8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="updateOrderStatus"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html#aabbfe9157de29fb8eb9a1623baae90b9"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekControllerLogin"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller_login.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekControllerLogin"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller_login.html#ac512a4729ec458b69108b9e70443616b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="checkLogin"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller_login.html#a1da6df7926e0ab9d3dd20404843f5d84"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="dal"><param name="Local" value="namespace_media_tek_documents_1_1dal.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Access"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddAbonnement"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#afa42ad191c28898366bbd8fcadce9e76"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommande"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a9fe77b6cf4163bb7f2808bd10ec9de6c"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="AddCommandeDocument"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ad3208650a4b214110dbb12fe6d4c6018"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CreerExemplaire"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a49b41a152a85598907cd41f50681dbe8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllAbonnements"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ac05514ddc62fb86b8bf1619e88799ede"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocuments"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ac1c46121f8fda69f65049aad6afa072b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsDvd"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a5b5ce48aa508ef4a47e41ecc91c976b6"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllCommandeDocumentsLivre"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ac6041f1cd54bb763e9d08dea24ed71df"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllDvd"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ad6e141fb3c8c28d381a62c76807f5f88"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllGenres"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a3c8e1bbfaf3e0332d27a69b3508c795d"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllLivres"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#adb24fd5f8c6c4db3ad86fee64cc95ad1"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllPublics"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#aa666fcd51e2dd4ab7feff1271bc8daf5"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRayons"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#abb34414355a628dd16b5f35876cf39e8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllRevues"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#af878e9be72359a411c8c1ca458dedbe6"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetAllStatus"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#af07578d35204ca9fd9479fe0c2bd2fb6"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetExemplairesRevue"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a8a22be0e93431c4462287ad25085e6e3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetIdCommande"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a6f83bb5d50a5e54115483d558a8d96f0"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetOrderCount"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#af8afbda019bb90a701cd397026b0cb8d"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GetStatus"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a9f1d808492c23e621f973ecc9b8a97c1"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="parutionDansAbonnement"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ad2baac1c46b58c1465a01e48337e3218"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveCommandeDocumentById"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#ae4ba2e3d08a23b14a13f19deeebe9282"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="retrieveDocumentById"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a57d748a8601de3e992048bea93477437"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SearchExemplaire"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a7923bc5f818b4202b21830683dd6bf41"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrder"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a66d970cb67c0f06d420551a35dfc4f64"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="SetNameOrderRevue"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#a70cdc5361b1f092b723accae1dc4c050"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="updateOrderStatus"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html#aabedae67b2d7ebd6eccb340b55869d60"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="manager"><param name="Local" value="namespace_media_tek_documents_1_1manager.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ApiRest"><param name="Local" value="class_media_tek_documents_1_1manager_1_1_api_rest.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="RecupDistant"><param name="Local" value="class_media_tek_documents_1_1manager_1_1_api_rest.html#ac66e7d97916346183ea90b62a3cc99d2"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="model"><param name="Local" value="namespace_media_tek_documents_1_1model.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Abonnement"><param name="Local" value="class_media_tek_documents_1_1model_1_1_abonnement.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Categorie"><param name="Local" value="class_media_tek_documents_1_1model_1_1_categorie.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="ToString"><param name="Local" value="class_media_tek_documents_1_1model_1_1_categorie.html#aa127da14b5715971b9f296cfefa105fb"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Commande"><param name="Local" value="class_media_tek_documents_1_1model_1_1_commande.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="CommandeDocument"><param name="Local" value="class_media_tek_documents_1_1model_1_1_commande_document.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Document"><param name="Local" value="class_media_tek_documents_1_1model_1_1_document.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Dvd"><param name="Local" value="class_media_tek_documents_1_1model_1_1_dvd.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Etat"><param name="Local" value="class_media_tek_documents_1_1model_1_1_etat.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Exemplaire"><param name="Local" value="class_media_tek_documents_1_1model_1_1_exemplaire.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Genre"><param name="Local" value="class_media_tek_documents_1_1model_1_1_genre.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Livre"><param name="Local" value="class_media_tek_documents_1_1model_1_1_livre.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="LivreDvd"><param name="Local" value="class_media_tek_documents_1_1model_1_1_livre_dvd.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Public"><param name="Local" value="class_media_tek_documents_1_1model_1_1_public.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Rayon"><param name="Local" value="class_media_tek_documents_1_1model_1_1_rayon.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Revue"><param name="Local" value="class_media_tek_documents_1_1model_1_1_revue.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Suivi"><param name="Local" value="class_media_tek_documents_1_1model_1_1_suivi.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Utilisateur"><param name="Local" value="class_media_tek_documents_1_1model_1_1_utilisateur.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="view"><param name="Local" value="namespace_media_tek_documents_1_1view.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatek"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Dispose"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek.html#ad165810ce498739484943e2f0db5a6d3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="RemplirComboCategorie"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek.html#a62b280a0c2bba8a8601931cc347ba162"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="FrmMediatekLogin"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek_login.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Dispose"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek_login.html#a11f41ad18071f9864c2b754df7a2474c"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.dal.Access"><param name="Local" value="class_media_tek_documents_1_1dal_1_1_access.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.manager.ApiRest"><param name="Local" value="class_media_tek_documents_1_1manager_1_1_api_rest.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Categorie"><param name="Local" value="class_media_tek_documents_1_1model_1_1_categorie.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Genre"><param name="Local" value="class_media_tek_documents_1_1model_1_1_genre.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Public"><param name="Local" value="class_media_tek_documents_1_1model_1_1_public.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Rayon"><param name="Local" value="class_media_tek_documents_1_1model_1_1_rayon.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Commande"><param name="Local" value="class_media_tek_documents_1_1model_1_1_commande.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Abonnement"><param name="Local" value="class_media_tek_documents_1_1model_1_1_abonnement.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.CommandeDocument"><param name="Local" value="class_media_tek_documents_1_1model_1_1_commande_document.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Document"><param name="Local" value="class_media_tek_documents_1_1model_1_1_document.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.LivreDvd"><param name="Local" value="class_media_tek_documents_1_1model_1_1_livre_dvd.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Dvd"><param name="Local" value="class_media_tek_documents_1_1model_1_1_dvd.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Livre"><param name="Local" value="class_media_tek_documents_1_1model_1_1_livre.html"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Revue"><param name="Local" value="class_media_tek_documents_1_1model_1_1_revue.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Etat"><param name="Local" value="class_media_tek_documents_1_1model_1_1_etat.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Exemplaire"><param name="Local" value="class_media_tek_documents_1_1model_1_1_exemplaire.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Form"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.view.FrmMediatek"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.view.FrmMediatekLogin"><param name="Local" value="class_media_tek_documents_1_1view_1_1_frm_mediatek_login.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.controller.FrmMediatekController"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.controller.FrmMediatekControllerLogin"><param name="Local" value="class_media_tek_documents_1_1controller_1_1_frm_mediatek_controller_login.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Suivi"><param name="Local" value="class_media_tek_documents_1_1model_1_1_suivi.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="MediaTekDocuments.model.Utilisateur"><param name="Local" value="class_media_tek_documents_1_1model_1_1_utilisateur.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="functions.html#top"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Variables"><param name="Local" value="functions_vars.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+</UL>
+</BODY>
+</HTML>

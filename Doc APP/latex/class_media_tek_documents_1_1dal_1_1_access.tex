@@ -1,0 +1,310 @@
+\doxysection{Media\+Tek\+Documents.\+dal.\+Access Class Reference}
+\hypertarget{class_media_tek_documents_1_1dal_1_1_access}{}\label{class_media_tek_documents_1_1dal_1_1_access}\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+
+
+Classe d\textquotesingle{}accès aux données.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_categorie}{Categorie}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_a3c8e1bbfaf3e0332d27a69b3508c795d}{Get\+All\+Genres}} ()
+\begin{DoxyCompactList}\small\item\em Retourne tous les genres à partir de la BDD. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_categorie}{Categorie}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_abb34414355a628dd16b5f35876cf39e8}{Get\+All\+Rayons}} ()
+\begin{DoxyCompactList}\small\item\em Retourne tous les rayons à partir de la BDD. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_categorie}{Categorie}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_aa666fcd51e2dd4ab7feff1271bc8daf5}{Get\+All\+Publics}} ()
+\begin{DoxyCompactList}\small\item\em Retourne toutes les catégories de public à partir de la BDD. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_suivi}{Suivi}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_af07578d35204ca9fd9479fe0c2bd2fb6}{Get\+All\+Status}} ()
+\begin{DoxyCompactList}\small\item\em retrieve all status from the database \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_suivi}{Suivi}} \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_a9f1d808492c23e621f973ecc9b8a97c1}{Get\+Status}} (string id)
+\begin{DoxyCompactList}\small\item\em retrieve the specific status from the database with the id \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande_document}{Commande\+Document}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_ac1c46121f8fda69f65049aad6afa072b}{Get\+All\+Commande\+Documents}} ()
+\begin{DoxyCompactList}\small\item\em retrieve all the orders documents from the database \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a2d82b536324eba2d310db5553a2ceec8}\label{class_media_tek_documents_1_1dal_1_1_access_a2d82b536324eba2d310db5553a2ceec8} 
+\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande}{Commande}} {\bfseries retrieve\+Commande\+By\+Id} (string id)
+\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ae4ba2e3d08a23b14a13f19deeebe9282}\label{class_media_tek_documents_1_1dal_1_1_access_ae4ba2e3d08a23b14a13f19deeebe9282} 
+\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande_document}{Commande\+Document}} {\bfseries retrieve\+Commande\+Document\+By\+Id} (string id)
+\begin{DoxyCompactList}\small\item\em retrieve orderdocument by its id \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ad3208650a4b214110dbb12fe6d4c6018}\label{class_media_tek_documents_1_1dal_1_1_access_ad3208650a4b214110dbb12fe6d4c6018} 
+bool {\bfseries Add\+Commande\+Document} (\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande_document}{Commande\+Document}} commande\+Document)
+\begin{DoxyCompactList}\small\item\em add a new order document \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a66d970cb67c0f06d420551a35dfc4f64}\label{class_media_tek_documents_1_1dal_1_1_access_a66d970cb67c0f06d420551a35dfc4f64} 
+string {\bfseries Set\+Name\+Order} (bool livre)
+\begin{DoxyCompactList}\small\item\em set the name of the order with retrieve the numbers of the order \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a70cdc5361b1f092b723accae1dc4c050}\label{class_media_tek_documents_1_1dal_1_1_access_a70cdc5361b1f092b723accae1dc4c050} 
+string {\bfseries Set\+Name\+Order\+Revue} ()
+\begin{DoxyCompactList}\small\item\em set name order to a revue order \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a5b5ce48aa508ef4a47e41ecc91c976b6}\label{class_media_tek_documents_1_1dal_1_1_access_a5b5ce48aa508ef4a47e41ecc91c976b6} 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande_document}{Commande\+Document}} $>$ {\bfseries Get\+All\+Commande\+Documents\+Dvd} ()
+\begin{DoxyCompactList}\small\item\em get commandedocument dvd \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ac6041f1cd54bb763e9d08dea24ed71df}\label{class_media_tek_documents_1_1dal_1_1_access_ac6041f1cd54bb763e9d08dea24ed71df} 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande_document}{Commande\+Document}} $>$ {\bfseries Get\+All\+Commande\+Documents\+Livre} ()
+\begin{DoxyCompactList}\small\item\em get commandedocument livre \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a57d748a8601de3e992048bea93477437}\label{class_media_tek_documents_1_1dal_1_1_access_a57d748a8601de3e992048bea93477437} 
+\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_document}{Document}} {\bfseries retrieve\+Document\+By\+Id} (string id)
+\begin{DoxyCompactList}\small\item\em retrieve livre by its id \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_af8afbda019bb90a701cd397026b0cb8d}\label{class_media_tek_documents_1_1dal_1_1_access_af8afbda019bb90a701cd397026b0cb8d} 
+int {\bfseries Get\+Order\+Count} ()
+\begin{DoxyCompactList}\small\item\em get order count \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_aabedae67b2d7ebd6eccb340b55869d60}{update\+Order\+Status}} (string id\+Commande, string id\+Status)
+\begin{DoxyCompactList}\small\item\em update the status of the order \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a7e7ccf954b1bf29188f086b953e8166e}\label{class_media_tek_documents_1_1dal_1_1_access_a7e7ccf954b1bf29188f086b953e8166e} 
+bool {\bfseries delete\+Order} (string id\+Commande)
+\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a6f83bb5d50a5e54115483d558a8d96f0}\label{class_media_tek_documents_1_1dal_1_1_access_a6f83bb5d50a5e54115483d558a8d96f0} 
+string {\bfseries Get\+Id\+Commande} (string id\+Docuement)
+\begin{DoxyCompactList}\small\item\em retrieve the id of the current order for adding a new orderdocument \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a9fe77b6cf4163bb7f2808bd10ec9de6c}\label{class_media_tek_documents_1_1dal_1_1_access_a9fe77b6cf4163bb7f2808bd10ec9de6c} 
+bool {\bfseries Add\+Commande} (\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande}{Commande}} commande)
+\begin{DoxyCompactList}\small\item\em add commande \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_livre}{Livre}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_adb24fd5f8c6c4db3ad86fee64cc95ad1}{Get\+All\+Livres}} ()
+\begin{DoxyCompactList}\small\item\em Retourne toutes les livres à partir de la BDD. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_dvd}{Dvd}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_ad6e141fb3c8c28d381a62c76807f5f88}{Get\+All\+Dvd}} ()
+\begin{DoxyCompactList}\small\item\em Retourne toutes les dvd à partir de la BDD. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_revue}{Revue}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_af878e9be72359a411c8c1ca458dedbe6}{Get\+All\+Revues}} ()
+\begin{DoxyCompactList}\small\item\em Retourne toutes les revues à partir de la BDD. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_exemplaire}{Exemplaire}} $>$ \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_a8a22be0e93431c4462287ad25085e6e3}{Get\+Exemplaires\+Revue}} (string id\+Document)
+\begin{DoxyCompactList}\small\item\em Retrieve the list of all the commands from the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_ad2baac1c46b58c1465a01e48337e3218}{parution\+Dans\+Abonnement}} (string date\+Commande, string date\+Fin\+Abo, string date\+Parution)
+\begin{DoxyCompactList}\small\item\em search if the dateparution is in the range of the abonnement \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a1cd4c8a253cf11f010ff711cca4e2dd0}\label{class_media_tek_documents_1_1dal_1_1_access_a1cd4c8a253cf11f010ff711cca4e2dd0} 
+\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_abonnement}{Abonnement}} {\bfseries retrieve\+Abonnement\+By\+Id} (string id)
+\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_afa42ad191c28898366bbd8fcadce9e76}\label{class_media_tek_documents_1_1dal_1_1_access_afa42ad191c28898366bbd8fcadce9e76} 
+bool {\bfseries Add\+Abonnement} (\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_abonnement}{Abonnement}} abonnement)
+\begin{DoxyCompactList}\small\item\em add abonnement \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ac05514ddc62fb86b8bf1619e88799ede}\label{class_media_tek_documents_1_1dal_1_1_access_ac05514ddc62fb86b8bf1619e88799ede} 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_abonnement}{Abonnement}} $>$ {\bfseries Get\+All\+Abonnements} ()
+\begin{DoxyCompactList}\small\item\em get all abonnement revues \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a7923bc5f818b4202b21830683dd6bf41}\label{class_media_tek_documents_1_1dal_1_1_access_a7923bc5f818b4202b21830683dd6bf41} 
+List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_exemplaire}{Exemplaire}} $>$ {\bfseries Search\+Exemplaire} (string id\+Document)
+\begin{DoxyCompactList}\small\item\em search list exemplaire by id of the document \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_a49b41a152a85598907cd41f50681dbe8}{Creer\+Exemplaire}} (\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_exemplaire}{Exemplaire}} exemplaire)
+\begin{DoxyCompactList}\small\item\em ecriture d\textquotesingle{}un exemplaire en base de données \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a43ff62fb9f009c22e897ba75131b40c6}\label{class_media_tek_documents_1_1dal_1_1_access_a43ff62fb9f009c22e897ba75131b40c6} 
+Date\+Time {\bfseries set\+Date\+Fin\+Abonnement} (string id)
+\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ac58ed060a32fe54b20e48746f86e10af}\label{class_media_tek_documents_1_1dal_1_1_access_ac58ed060a32fe54b20e48746f86e10af} 
+\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_utilisateur}{Utilisateur}} {\bfseries check\+Login} (string login, string password)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access}{Access}} \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access_a6d1fed556ce2c0a862d29b60f0d17a8f}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Création et retour de l\textquotesingle{}instance unique de la classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a5dfa84c046b6f89ff6fc07a1cab759d0}\label{class_media_tek_documents_1_1dal_1_1_access_a5dfa84c046b6f89ff6fc07a1cab759d0} 
+const string {\bfseries PUT} = "{}PUT"{}
+\begin{DoxyCompactList}\small\item\em méthode HTTP pour update \end{DoxyCompactList}\item 
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a8ec5d8f374eef617254b3d66008b1805}\label{class_media_tek_documents_1_1dal_1_1_access_a8ec5d8f374eef617254b3d66008b1805} 
+const string {\bfseries DELETE} = "{}DELETE"{}
+\begin{DoxyCompactList}\small\item\em methode HTTP pour delete \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe d\textquotesingle{}accès aux données. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a49b41a152a85598907cd41f50681dbe8}\label{class_media_tek_documents_1_1dal_1_1_access_a49b41a152a85598907cd41f50681dbe8} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!CreerExemplaire@{CreerExemplaire}}
+\index{CreerExemplaire@{CreerExemplaire}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{CreerExemplaire()}{CreerExemplaire()}}
+{\footnotesize\ttfamily bool Media\+Tek\+Documents.\+dal.\+Access.\+Creer\+Exemplaire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_exemplaire}{Exemplaire}}}]{exemplaire }\end{DoxyParamCaption})}
+
+
+
+ecriture d\textquotesingle{}un exemplaire en base de données 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exemplaire} & exemplaire à insérer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}insertion a pu se faire (retour != null)
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ac1c46121f8fda69f65049aad6afa072b}\label{class_media_tek_documents_1_1dal_1_1_access_ac1c46121f8fda69f65049aad6afa072b} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllCommandeDocuments@{GetAllCommandeDocuments}}
+\index{GetAllCommandeDocuments@{GetAllCommandeDocuments}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllCommandeDocuments()}{GetAllCommandeDocuments()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_commande_document}{Commande\+Document}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Commande\+Documents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retrieve all the orders documents from the database 
+
+\begin{DoxyReturn}{Returns}
+List$<$returns$>$ summary\texorpdfstring{$>$}{>} retrieve order by its id
+
+\begin{DoxyReturn}{Returns}
+commande
+\end{DoxyReturn}
+
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ad6e141fb3c8c28d381a62c76807f5f88}\label{class_media_tek_documents_1_1dal_1_1_access_ad6e141fb3c8c28d381a62c76807f5f88} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllDvd@{GetAllDvd}}
+\index{GetAllDvd@{GetAllDvd}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllDvd()}{GetAllDvd()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_dvd}{Dvd}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Dvd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne toutes les dvd à partir de la BDD. 
+
+\begin{DoxyReturn}{Returns}
+Liste d\textquotesingle{}objets Dvd
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a3c8e1bbfaf3e0332d27a69b3508c795d}\label{class_media_tek_documents_1_1dal_1_1_access_a3c8e1bbfaf3e0332d27a69b3508c795d} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllGenres@{GetAllGenres}}
+\index{GetAllGenres@{GetAllGenres}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllGenres()}{GetAllGenres()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_categorie}{Categorie}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Genres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne tous les genres à partir de la BDD. 
+
+\begin{DoxyReturn}{Returns}
+Liste d\textquotesingle{}objets Genre
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_adb24fd5f8c6c4db3ad86fee64cc95ad1}\label{class_media_tek_documents_1_1dal_1_1_access_adb24fd5f8c6c4db3ad86fee64cc95ad1} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllLivres@{GetAllLivres}}
+\index{GetAllLivres@{GetAllLivres}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllLivres()}{GetAllLivres()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_livre}{Livre}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Livres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne toutes les livres à partir de la BDD. 
+
+\begin{DoxyReturn}{Returns}
+Liste d\textquotesingle{}objets Livre
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_aa666fcd51e2dd4ab7feff1271bc8daf5}\label{class_media_tek_documents_1_1dal_1_1_access_aa666fcd51e2dd4ab7feff1271bc8daf5} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllPublics@{GetAllPublics}}
+\index{GetAllPublics@{GetAllPublics}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllPublics()}{GetAllPublics()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_categorie}{Categorie}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Publics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne toutes les catégories de public à partir de la BDD. 
+
+\begin{DoxyReturn}{Returns}
+Liste d\textquotesingle{}objets Public
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_abb34414355a628dd16b5f35876cf39e8}\label{class_media_tek_documents_1_1dal_1_1_access_abb34414355a628dd16b5f35876cf39e8} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllRayons@{GetAllRayons}}
+\index{GetAllRayons@{GetAllRayons}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllRayons()}{GetAllRayons()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_categorie}{Categorie}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Rayons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne tous les rayons à partir de la BDD. 
+
+\begin{DoxyReturn}{Returns}
+Liste d\textquotesingle{}objets Rayon
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_af878e9be72359a411c8c1ca458dedbe6}\label{class_media_tek_documents_1_1dal_1_1_access_af878e9be72359a411c8c1ca458dedbe6} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllRevues@{GetAllRevues}}
+\index{GetAllRevues@{GetAllRevues}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllRevues()}{GetAllRevues()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_revue}{Revue}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Revues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne toutes les revues à partir de la BDD. 
+
+\begin{DoxyReturn}{Returns}
+Liste d\textquotesingle{}objets Revue
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_af07578d35204ca9fd9479fe0c2bd2fb6}\label{class_media_tek_documents_1_1dal_1_1_access_af07578d35204ca9fd9479fe0c2bd2fb6} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetAllStatus@{GetAllStatus}}
+\index{GetAllStatus@{GetAllStatus}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetAllStatus()}{GetAllStatus()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_suivi}{Suivi}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+All\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retrieve all status from the database 
+
+\begin{DoxyReturn}{Returns}
+list of status
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a8a22be0e93431c4462287ad25085e6e3}\label{class_media_tek_documents_1_1dal_1_1_access_a8a22be0e93431c4462287ad25085e6e3} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetExemplairesRevue@{GetExemplairesRevue}}
+\index{GetExemplairesRevue@{GetExemplairesRevue}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetExemplairesRevue()}{GetExemplairesRevue()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_exemplaire}{Exemplaire}} $>$ Media\+Tek\+Documents.\+dal.\+Access.\+Get\+Exemplaires\+Revue (\begin{DoxyParamCaption}\item[{string}]{id\+Document }\end{DoxyParamCaption})}
+
+
+
+Retrieve the list of all the commands from the database. 
+
+\begin{DoxyReturn}{Returns}
+list of documents
+\end{DoxyReturn}
+
+
+Retourne les exemplaires d\textquotesingle{}une revue
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Document} & id de la revue concernée\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Liste d\textquotesingle{}objets Exemplaire
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a6d1fed556ce2c0a862d29b60f0d17a8f}\label{class_media_tek_documents_1_1dal_1_1_access_a6d1fed556ce2c0a862d29b60f0d17a8f} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_media_tek_documents_1_1dal_1_1_access}{Access}} Media\+Tek\+Documents.\+dal.\+Access.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Création et retour de l\textquotesingle{}instance unique de la classe. 
+
+\begin{DoxyReturn}{Returns}
+instance unique de la classe
+\end{DoxyReturn}
+\Hypertarget{class_media_tek_documents_1_1dal_1_1_access_a9f1d808492c23e621f973ecc9b8a97c1}\label{class_media_tek_documents_1_1dal_1_1_access_a9f1d808492c23e621f973ecc9b8a97c1} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{GetStatus()}{GetStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_media_tek_documents_1_1model_1_1_suivi}{Suivi}} Media\+Tek\+Documents.\+dal.\+Access.\+Get\+Status (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+
+
+retrieve the specific status from the database with the id 
+
+5 \Hypertarget{class_media_tek_documents_1_1dal_1_1_access_ad2baac1c46b58c1465a01e48337e3218}\label{class_media_tek_documents_1_1dal_1_1_access_ad2baac1c46b58c1465a01e48337e3218} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!parutionDansAbonnement@{parutionDansAbonnement}}
+\index{parutionDansAbonnement@{parutionDansAbonnement}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{parutionDansAbonnement()}{parutionDansAbonnement()}}
+{\footnotesize\ttfamily bool Media\+Tek\+Documents.\+dal.\+Access.\+parution\+Dans\+Abonnement (\begin{DoxyParamCaption}\item[{string}]{date\+Commande,  }\item[{string}]{date\+Fin\+Abo,  }\item[{string}]{date\+Parution }\end{DoxyParamCaption})}
+
+
+
+search if the dateparution is in the range of the abonnement 
+
+summary\texorpdfstring{$>$}{>} Retrieve abonnement by its id \Hypertarget{class_media_tek_documents_1_1dal_1_1_access_aabedae67b2d7ebd6eccb340b55869d60}\label{class_media_tek_documents_1_1dal_1_1_access_aabedae67b2d7ebd6eccb340b55869d60} 
+\index{MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}!updateOrderStatus@{updateOrderStatus}}
+\index{updateOrderStatus@{updateOrderStatus}!MediaTekDocuments.dal.Access@{MediaTekDocuments.dal.Access}}
+\doxysubsubsection{\texorpdfstring{updateOrderStatus()}{updateOrderStatus()}}
+{\footnotesize\ttfamily bool Media\+Tek\+Documents.\+dal.\+Access.\+update\+Order\+Status (\begin{DoxyParamCaption}\item[{string}]{id\+Commande,  }\item[{string}]{id\+Status }\end{DoxyParamCaption})}
+
+
+
+update the status of the order 
+
+summary\texorpdfstring{$>$}{>} delete a command document 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Media\+Tek\+Documents/Access.\+cs\end{DoxyCompactItemize}
