@@ -136,11 +136,11 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// set the name of the order with retrieve the numbers of the order
+        /// get the number of orders
         /// </summary>
-        public string SetNameOrder(bool livre)
+        public bool OrderExist(string name)
         {
-            return access.SetNameOrder(livre);
+            return access.OrderExist(name);
         }
 
         /// <summary>
@@ -250,13 +250,7 @@ namespace MediaTekDocuments.controller
             return access.GetAllAbonnements();
         }
 
-        /// <summary>
-        /// set name order abonnement
-        /// </summary>
-        public string SetNameOrderRevue()
-        {
-            return access.SetNameOrderRevue();
-        }
+   
 
         /// <summary>
         /// search if the dateparution is in the range of the abonnement

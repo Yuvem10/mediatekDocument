@@ -170,7 +170,7 @@ namespace MediaTekDocuments.dal
         {
             String jsonIdDocument = convertToJson("id", id);
             IEnumerable<Commande> commande = TraitementRecup<Commande>(GET, "commande/" + jsonIdDocument);
-            Log.Information("Récupération de la commande");
+            Log.Information("Récupération de la commande" + commande);
             return new List<Commande>(commande)[0];
         }
 
@@ -181,7 +181,7 @@ namespace MediaTekDocuments.dal
         {
             String jsonIdDocument = convertToJson("id", id);
             IEnumerable<CommandeDocument> commandeDocument = TraitementRecup<CommandeDocument>(GET, "commandedocument/" + jsonIdDocument);
-            Log.Information("Récupération de la commande document");
+            Log.Information("Récupération de la commande document" + commandeDocument);
  
             return new List<CommandeDocument>(commandeDocument)[0];
         }
@@ -209,75 +209,18 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
-        /// set the name of the order with retrieve the numbers of the order
+        /// control if the name is in the database
         /// </summary>
-        public string SetNameOrder(bool livre)
+        public bool OrderExist(string name)
         {
-            IEnumerable<Commande> commande = TraitementRecup<Commande>(GET, "commande");
-            List<Commande> liste = new List<Commande>(commande);
-
-            if (livre)
-            {
-                List<CommandeDocument> listeCommande = GetAllCommandeDocumentsLivre();
-
-                if (listeCommande.Count == 0)
-                {
-                    return "CMDL1";
-                }
-
-                string id = listeCommande[listeCommande.Count - 1].id;
-                string number = id.Substring(4);
-                int numberInt = Int32.Parse(number);
-                numberInt++;
-                string newId = "CMDL" + numberInt;
-                Log.Information("Création de la commande document");
-                return newId;     
-            }
-            else
-            {
-                List<CommandeDocument> listeCommande = GetAllCommandeDocumentsDvd();
-
-                if (listeCommande.Count == 0)
-                {
-                    return "CMDD1";
-                }
-
-
-                string id = listeCommande[listeCommande.Count - 1].id;
-                string number = id.Substring(4);
-                int numberInt = Int32.Parse(number);
-                numberInt++;
-                string newId = "CMDD" + numberInt;
-                Log.Information("Création de la commande document");
-                return newId;
-            }
-            
-            
+            String jsonName = convertToJson("id", name);
+            IEnumerable<Commande> commande = TraitementRecup<Commande>(GET, "commande/" + jsonName);
+            Log.Information("Vérification de l'existence de la commande");
+            return (commande.Count() != 0);
         }
 
-        /// <summary>
-        /// set name order to a revue order
-        /// </summary>
-        public string SetNameOrderRevue()
-        {
-            IEnumerable<Commande> commande = TraitementRecup<Commande>(GET, "commande");
-            List<Commande> liste = new List<Commande>(commande);
 
-            List<Abonnement> listeCommande = GetAllAbonnements();
 
-            if (listeCommande.Count == 0)
-            {
-                return "CMDR1";
-            }
-
-            string id = listeCommande[listeCommande.Count - 1].id;
-            string number = id.Substring(4);
-            int numberInt = Int32.Parse(number);
-            numberInt++;
-            string newId = "CMDR" + numberInt;
-            Log.Information("Création de la commande document");
-            return newId;
-        }
 
         /// <summary>
         /// get commandedocument dvd
@@ -290,33 +233,34 @@ namespace MediaTekDocuments.dal
             List<CommandeDocument> liste = new List<CommandeDocument>();
             foreach (CommandeDocument commande in listeDvd)
             {
-                if (commande.id.StartsWith("CMDD"))
+                if (commande.id.StartsWith("D"))
                 {
                     liste.Add(commande);
                 }
             }
-            Log.Information("Récupération des commandes document");
+            Log.Information("Récupération des commandes document :" +liste.Count);
             return liste;
         }
 
         /// <summary>
-        /// get commandedocument livre
+        /// retrieve all the orders who start with "L"
         /// </summary>
         public List<CommandeDocument> GetAllCommandeDocumentsLivre()
         {
-            // retrieve all the order document where the id starts with CMDL
+            // retrieve all the order document where the id starts with CMDD
             IEnumerable<CommandeDocument> commandeDocument = TraitementRecup<CommandeDocument>(GET, "commandedocument");
             List<CommandeDocument> listeLivre = new List<CommandeDocument>(commandeDocument);
             List<CommandeDocument> liste = new List<CommandeDocument>();
             foreach (CommandeDocument commande in listeLivre)
             {
-                if (commande.id.StartsWith("CMDL"))
+                if (commande.id.StartsWith("L"))
                 {
                     liste.Add(commande);
                 }
             }
-            Log.Information("Récupération des commandes document");
+            Log.Information("Récupération des commandes document :" + liste.Count);
             return liste;
+
         }
 
 
@@ -537,7 +481,7 @@ namespace MediaTekDocuments.dal
         {
             IEnumerable<Abonnement> abonnement = TraitementRecup<Abonnement>(GET, "abonnement");
             List<Abonnement> listeAbonnement = new List<Abonnement>(abonnement);
-            Log.Information("Récupération des abonnements");
+            Log.Information("Récupération des abonnements" + listeAbonnement);
 
             return listeAbonnement;
           

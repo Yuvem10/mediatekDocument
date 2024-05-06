@@ -9,7 +9,7 @@ namespace MediaTekDocuments.model
     public class Utilisateur
     {
         private int id {get;}
-        private string identifiant { get;}
+        public string identifiant { get;}
         public string password { get;}
         public string nomService { get;}
 

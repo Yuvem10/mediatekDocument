@@ -1289,9 +1289,10 @@ namespace MediaTekDocuments.view
                 RemplirComboCategorie(controller.GetAllPublics(), bdgPublics, cbxBooksPublics);
                 RemplirComboCategorie(controller.GetAllRayons(), bdgRayons, cbxBooksRayons);
                 fillBooksFullList();
-                fillStatusCombo();
+                fillStatusCombo(controller.GetAllStatus(), bdgSuivi, cbxStatut);    
                 fillOrdersFullList();
                 btnCommandeNouveau_Click(sender, e);
+
             }
         }
 
@@ -1300,27 +1301,27 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void dgvOrdersList_SelectionChanged(object sender, EventArgs e)
         {
+
             if (dgvOrdersList.CurrentCell != null)
             {
                 try
                 {
-                    string idCommande = (string)dgvOrdersList.CurrentRow.Cells[0].Value;
-                    CommandeDocument commandeDocument = controller.retrieveCommandeDocumentById(idCommande);
-                    Commande commande = controller.retrieveCommandeById(idCommande);
-                    txbCommandeId.Text = commande.id.ToString();
-                    dtpCommandeDate.Value = commande.dateCommande;
-                    txbCommandeMontant.Text = commande.montant.ToString();
-                    txbCommandeNbExemplaires.Text = commandeDocument.nbExemplaire.ToString();
-                    cbxStatut.SelectedValue = commandeDocument.statut;
+                    int id = dgvOrdersList.Columns["id"].Index;
+                    string idStr = dgvOrdersList.CurrentRow.Cells[id].Value.ToString();
+                    txbCommandeId.Text = idStr;
 
-                    // set the book title of selected line on the textboxlivrecom
-                    int id = dgvOrdersList.Columns["LivreCom"].Index;
-                    txbLivreCom.Text = dgvOrdersList.CurrentRow.Cells[id].Value.ToString();
+                    // do the same for the other fields
+                    int idMontant = dgvOrdersList.Columns["montant"].Index;
+                    txbCommandeMontant.Text = dgvOrdersList.CurrentRow.Cells[idMontant].Value.ToString();
 
+                    int idNbExemplaires = dgvOrdersList.Columns["nbExemplaire"].Index;
+                    txbCommandeNbExemplaires.Text = dgvOrdersList.CurrentRow.Cells[idNbExemplaires].Value.ToString();
+
+                    int idStatut = dgvOrdersList.Columns["statut"].Index;
+                    cbxStatut.Text = dgvOrdersList.CurrentRow.Cells[idStatut].Value.ToString();
 
                     // disable the fields
                     txbCommandeId.Enabled = false;
-                    dtpCommandeDate.Enabled = false;
                     txbCommandeMontant.Enabled = false;
                     txbCommandeNbExemplaires.Enabled = false;
                     txbLivreCom.Enabled = false;
@@ -1332,23 +1333,26 @@ namespace MediaTekDocuments.view
                     btnCommandeAjouter.Enabled = false;
                     btnCommandeModifier.Enabled = true;
                     btnCommandeSupprimer.Enabled = true;
-                    btnCommandeNouvelle.Enabled = true;
 
-                    // set the value of cbxStatut to the global variable
                     globalStatut = cbxStatut.Text;
 
-                    // set the globalSelected to true
+                    // retrieve the book title with the order and write it in the txbLivreCom
+                    int idLivre = dgvOrdersList.Columns["idLivreDvd"].Index;
+                    string idLivreStr = dgvOrdersList.CurrentRow.Cells[idLivre].Value.ToString();
+                    Livre livre = lesLivres.Find(x => x.Id.Equals(idLivreStr));
+                    txbLivreCom.Text = livre.Titre;
+
                     globalSelected = true;
 
                 }
                 catch
                 {
-                    emptyOrderZone();
+
                 }
             }
             else
             {
-                emptyOrderZone();
+
             }
         }
 
@@ -1391,19 +1395,32 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void btnCommandeAjouter_Click(object sender, EventArgs e)
         {
+            string name = "L" + txbCommandeId.Text;
+
+
             if (txbCommandeMontant.Text == "" || txbCommandeNbExemplaires.Text == "")
             {
                 MessageBox.Show("Veuillez remplir tous les champs");
             }
-            else
-            {
-                CommandeDocument commandeDocument = new CommandeDocument(txbCommandeId.Text, dtpCommandeDate.Value, int.Parse(txbCommandeMontant.Text), int.Parse(txbCommandeNbExemplaires.Text), globalId, cbxStatut.Text); 
-                controller.AddCommandeDocument(commandeDocument);
-                fillOrdersFullList();
-            }
 
             
-            
+            else if (txbCommandeId.Text.Length > 4)
+            {
+                MessageBox.Show("Le nom de la commande ne doit pas dépasser 4 caractères");
+            }
+
+            // if the order is already in the database
+            else if (controller.OrderExist(name) == true)
+            {
+                MessageBox.Show("La commande existe déjà");
+            }
+      
+            else
+            {
+                CommandeDocument commandeDocument = new CommandeDocument(name, dtpCommandeDate.Value, int.Parse(txbCommandeMontant.Text), int.Parse(txbCommandeNbExemplaires.Text), globalId, cbxStatut.Text, txbLivreCom.Text); 
+                controller.AddCommandeDocument(commandeDocument);
+                fillOrdersFullList();
+            } 
         }
 
   
@@ -1413,7 +1430,7 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void btnCommandeNouveau_Click(object sender, EventArgs e)
         {
-            globalSelected = false;
+           
             emptyOrderZone();
             txbCommandeId.Enabled = true;
             dtpCommandeDate.Enabled = true;
@@ -1424,15 +1441,11 @@ namespace MediaTekDocuments.view
             cbxStatut.SelectedIndex = 0;
             cbxStatut.Enabled = false;
 
-            // set the name of the order
-            string orderName = controller.SetNameOrder(true);
-            txbCommandeId.Text = orderName;
+            txbLivreCom.Enabled = false;
 
-            
+            globalSelected = false;
 
-            // disabled the input of the name of the order
-            txbCommandeId.Enabled = false;
-
+      
             btnCommandeAjouter.Enabled = true;
             btnCommandeModifier.Enabled = false;
             btnCommandeSupprimer.Enabled = false;
@@ -1482,12 +1495,19 @@ namespace MediaTekDocuments.view
             }
             else
             {
-                // delete the order
-                controller.deleteOrder(txbCommandeId.Text);
-                fillOrdersFullList();
-                MessageBox.Show("La commande a été supprimée avec succès", "Suppression de commande");
+                // delete the order with a confirmation message
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment supprimer cette commande ?", "Suppression de commande", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    controller.deleteOrder(txbCommandeId.Text);
+                    fillOrdersFullList();
+                    MessageBox.Show("La commande a été supprimée avec succès", "Suppression de commande");
+
+                    // nouvelle commande
+                    btnCommandeNouveau_Click(sender, e);
+                }
             }
-            
+
         }
        
 
@@ -1506,14 +1526,11 @@ namespace MediaTekDocuments.view
         ///<summary>
         /// fill the status combo
         /// </summary>
-        private void fillStatusCombo()
+        private void fillStatusCombo(List<Suivi> suivi, BindingSource bdgSuivi, ComboBox cbxStatut)
         {
-            List<Suivi> etats = controller.GetAllStatus();
-            bdgCommandes.DataSource = etats;
-            cbxStatut.DataSource = bdgCommandes;
+            bdgSuivi.DataSource = suivi;
+            cbxStatut.DataSource = bdgSuivi;
             cbxStatut.ValueMember = "statut";
-            // disable the input of the status combo
-            cbxStatut.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         /// <summary>
@@ -1543,10 +1560,11 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void fillOrdersFullList()
         {
-            int orderCount = controller.GetOrderCount();
+            int orderCount = controller.GetOrderCount(); 
+
             if (orderCount == 0)
             {
-                globalSelected = false;
+              
                 emptyOrderZone();
                 txbCommandeId.Enabled = true;
                 dtpCommandeDate.Enabled = true;
@@ -1558,19 +1576,11 @@ namespace MediaTekDocuments.view
                 cbxStatut.SelectedIndex = 0;
                 cbxStatut.Enabled = false;
 
-                // set the name of the order
-                string orderName = controller.SetNameOrder(true);
-                txbCommandeId.Text = orderName;
-
-
-
-                // disabled the input of the name of the order
-                txbCommandeId.Enabled = false;
-
+            
                 btnCommandeAjouter.Enabled = true;
                 btnCommandeModifier.Enabled = false;
                 btnCommandeSupprimer.Enabled = false;
-                btnCommandeNouvelle.Enabled = false;
+                
             }
             List<CommandeDocument> commandeDocuments = controller.GetAllCommandeDocumentsLivre();
             fillOrdersList(commandeDocuments);
@@ -1582,25 +1592,19 @@ namespace MediaTekDocuments.view
         /// <param name="commandeDocuments">liste de commandes</param>
         private void fillOrdersList(List<CommandeDocument> commandeDocuments)
         {
-            // Effacer les colonnes existantes
-            dgvOrdersList.Columns.Clear();
+            bdgCommandes.DataSource = commandeDocuments;
+            dgvOrdersList.DataSource = bdgCommandes;
+            dgvOrdersList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            // set the id to 0 
+            dgvOrdersList.Columns["id"].DisplayIndex = 0;
+            dgvOrdersList.Columns["dateCommande"].DisplayIndex = 1;
+            dgvOrdersList.Columns["montant"].DisplayIndex = 2;
+            dgvOrdersList.Columns["nbExemplaire"].DisplayIndex = 3;
+            dgvOrdersList.Columns["statut"].DisplayIndex = 5;
+            dgvOrdersList.Columns["titre"].DisplayIndex = 4;
+            dgvOrdersList.Columns["idLivreDvd"].Visible = false;
+           
 
-            // Ajouter les colonnes nécessaires
-            dgvOrdersList.Columns.Add("Id", "Nom");
-            dgvOrdersList.Columns.Add("DateCommande", "Date de commande");
-            dgvOrdersList.Columns.Add("Montant", "Montant");
-            dgvOrdersList.Columns.Add("NbExemplaire", "Nombre d'exemplaires");
-            dgvOrdersList.Columns.Add("LivreCom", "Livre commandé");
-            dgvOrdersList.Columns.Add("Statut", "Statut");
-
-            // Remplir les lignes avec les données de la liste commandeDocuments
-            foreach (var commande in commandeDocuments)
-            {
-                Commande currentCommande = controller.retrieveCommandeById(commande.id);
-                Document livre = controller.retrieveDocumentById(commande.idLivreDvd);
-                string titleBook = livre.Titre;
-                dgvOrdersList.Rows.Add(commande.id, currentCommande.dateCommande.ToShortDateString(), currentCommande.montant, commande.nbExemplaire, titleBook ,commande.statut);
-            }
         }
 
         /// <summary>
@@ -1656,6 +1660,37 @@ namespace MediaTekDocuments.view
                     break;
             }
             fillBooksList(sortedList);
+        }
+
+        /// <summary>
+        /// tri sur les colonnes de la liste des commandes
+        /// </summary>
+        private void dgvOrdersList_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string titreColonne = dgvOrdersList.Columns[e.ColumnIndex].HeaderText;
+            List<CommandeDocument> sortedList = new List<CommandeDocument>();
+            switch (titreColonne)
+            {
+                case "id":
+                    sortedList = controller.GetAllCommandeDocumentsLivre().OrderBy(o => o.id).ToList();
+                    break;
+                case "dateCommande":
+                    sortedList = controller.GetAllCommandeDocumentsLivre().OrderBy(o => o.dateCommande).ToList();
+                    break;
+                case "montant":
+                    sortedList = controller.GetAllCommandeDocumentsLivre().OrderBy(o => o.montant).ToList();
+                    break;
+                case "nbExemplaire":
+                    sortedList = controller.GetAllCommandeDocumentsLivre().OrderBy(o => o.nbExemplaire).ToList();
+                    break;
+                case "statut":
+                    sortedList = controller.GetAllCommandeDocumentsLivre().OrderBy(o => o.statut).ToList();
+                    break;
+                case "titre":
+                    sortedList = controller.GetAllCommandeDocumentsLivre().OrderBy(o => o.titre).ToList();
+                    break;
+            }
+            fillOrdersList(sortedList);
         }
 
 
@@ -1748,7 +1783,8 @@ namespace MediaTekDocuments.view
         #region Onglet Commandes de DVD
 
         private readonly BindingSource bdgCommandesDvd = new BindingSource();
-        private readonly BindingSource bdgCommandeDocumentsDvd = new BindingSource();
+        private readonly BindingSource bdgSuivi = new BindingSource();
+
 
 
 
@@ -1761,7 +1797,7 @@ namespace MediaTekDocuments.view
         {
             if (service == "Prêts")
             {
-                tabOngletsApplication.TabPages[5555575].Enabled = false;
+                tabOngletsApplication.TabPages[5].Enabled = false;
 
             }
             else
@@ -1771,15 +1807,17 @@ namespace MediaTekDocuments.view
                 RemplirComboCategorie(controller.GetAllPublics(), bdgPublics, cbxBooksPublicsDvd);
                 RemplirComboCategorie(controller.GetAllRayons(), bdgRayons, cbxBooksRayonsDvd);
                 fillBooksFullListDvd();
-                fillStatusComboDvd();
+                fillStatusCombo(controller.GetAllStatus(), bdgSuivi, cbxStatutDvd);
                 fillOrdersFullListDvd();
+                // new order 
                 btnCommandeNouveauDvd_Click(sender, e);
+
             }
 
         }
 
         /// <summary>
-        /// display the information of the selected line
+        /// display the information of the selected line in the datagrid of orders
         /// </summary>
         private void dgvOrdersListDvd_SelectionChanged(object sender, EventArgs e)
         {
@@ -1787,52 +1825,59 @@ namespace MediaTekDocuments.view
             {
                 try
                 {
-                    string idCommande = (string)dgvOrdersListDvd.CurrentRow.Cells[0].Value;
-                    CommandeDocument commandeDocument = controller.retrieveCommandeDocumentById(idCommande);
-                    Commande commande = controller.retrieveCommandeById(idCommande);
-                    txbCommandeIdDvd.Text = commande.id.ToString();
-                    dtpCommandeDateDvd.Value = commande.dateCommande;
-                    txbCommandeMontantDvd.Text = commande.montant.ToString();
-                    txbCommandeNbExemplairesDvd.Text = commandeDocument.nbExemplaire.ToString();
-                    cbxStatutDvd.SelectedValue = commandeDocument.statut;
+                    int id = dgvOrdersListDvd.Columns["id"].Index;
+                    string idStr = dgvOrdersListDvd.CurrentRow.Cells[id].Value.ToString();
+                    txbCommandeIdDvd.Text = idStr;
 
-                    // set the book title of selected line on the textboxlivrecom
-                    int id = dgvOrdersListDvd.Columns["DvdCom"].Index;
-                    txbLivreComDvd.Text = dgvOrdersListDvd.CurrentRow.Cells[id].Value.ToString();
+                    // do the same for the other fields
+                    int idMontant = dgvOrdersListDvd.Columns["montant"].Index;
+                    txbCommandeMontantDvd.Text = dgvOrdersListDvd.CurrentRow.Cells[idMontant].Value.ToString();
+
+                    int idNbExemplaires = dgvOrdersListDvd.Columns["nbExemplaire"].Index;
+                    txbCommandeNbExemplairesDvd.Text = dgvOrdersListDvd.CurrentRow.Cells[idNbExemplaires].Value.ToString();
+
+                    int idStatut = dgvOrdersListDvd.Columns["statut"].Index;
+                    cbxStatutDvd.Text = dgvOrdersListDvd.CurrentRow.Cells[idStatut].Value.ToString();
+
+
+                    // retrieve the dvd title with the order and write it in the txbLivreComDvd
+                    int idDvd = dgvOrdersListDvd.Columns["idLivreDvd"].Index;
+                    string idDvdStr = dgvOrdersListDvd.CurrentRow.Cells[idDvd].Value.ToString();
+                    Dvd dvd = lesDvd.Find(x => x.Id.Equals(idDvdStr));
+                    txbLivreComDvd.Text = dvd.Titre;
+
 
 
                     // disable the fields
                     txbCommandeIdDvd.Enabled = false;
-                    dtpCommandeDateDvd.Enabled = false;
                     txbCommandeMontantDvd.Enabled = false;
                     txbCommandeNbExemplairesDvd.Enabled = false;
                     txbLivreComDvd.Enabled = false;
 
-                    // enabled the cbxstatut
+                    // enabled the cbx statut
                     cbxStatutDvd.Enabled = true;
 
                     // disabled the buttons
                     btnCommandeAjouterDvd.Enabled = false;
                     btnCommandeModifierDvd.Enabled = true;
                     btnCommandeSupprimerDvd.Enabled = true;
-                    btnCommandeNouvelleDvd.Enabled = true;
 
-                    // set the value of cbxStatut to the global variable
                     globalStatut = cbxStatutDvd.Text;
 
-                    // set the globalSelected to true
                     globalSelected = true;
 
                 }
                 catch
                 {
-                    emptyOrderZoneDvd();
+
                 }
             }
             else
             {
-                emptyOrderZoneDvd();
+
             }
+
+
         }
 
 
@@ -1855,17 +1900,16 @@ namespace MediaTekDocuments.view
                         int idLivreCom = dgvLivresCmdDvd.Columns["titre"].Index;
                         txbLivreComDvd.Text = dgvLivresCmdDvd.CurrentRow.Cells[idLivreCom].Value.ToString();
                     }
-                    
-
                 }
                 catch
                 {
-                    
+                    // message d'erreur
+                    MessageBox.Show("Erreur lors de la récupération de l'identifiant du livre");
                 }
             }
             else
             {
-                
+               
             }
         }
 
@@ -1875,18 +1919,29 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void btnCommandeAjouterDvd_Click(object sender, EventArgs e)
         {
-
+            string name = "D" + txbCommandeIdDvd.Text;
             if (txbCommandeNbExemplairesDvd.Text == "" || txbCommandeMontantDvd.Text == "")
             {
                 MessageBox.Show("Veuillez remplir tous les champs");
             }
+            else if (txbCommandeIdDvd.Text.Length > 4)
+            {
+                MessageBox.Show("Le nom de la commande ne doit pas dépasser 4 caractères");
+            }
+            else if (controller.OrderExist(name) == true)
+            {
+                MessageBox.Show("La commande existe déjà");
+            }
             else
             {
-                CommandeDocument commandeDocument = new CommandeDocument(txbCommandeIdDvd.Text, dtpCommandeDateDvd.Value, int.Parse(txbCommandeMontantDvd.Text), int.Parse(txbCommandeNbExemplairesDvd.Text), globalId, cbxStatutDvd.Text); ;
+                CommandeDocument commandeDocument = new CommandeDocument(name, dtpCommandeDateDvd.Value, int.Parse(txbCommandeMontantDvd.Text), int.Parse(txbCommandeNbExemplairesDvd.Text), globalId, cbxStatutDvd.Text, txbLivreComDvd.Text);
                 controller.AddCommandeDocument(commandeDocument);
                 fillOrdersFullListDvd();
             }
+            
+        
         }
+          
 
   
 
@@ -1895,7 +1950,7 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void btnCommandeNouveauDvd_Click(object sender, EventArgs e)
         {
-            globalSelected = false;
+     
             emptyOrderZoneDvd();
             txbCommandeIdDvd.Enabled = true;
             dtpCommandeDateDvd.Enabled = true;
@@ -1906,14 +1961,15 @@ namespace MediaTekDocuments.view
             cbxStatutDvd.SelectedIndex = 0;
             cbxStatutDvd.Enabled = false;
 
-            // set the name of the order
-            string orderName = controller.SetNameOrder(false);
-            txbCommandeIdDvd.Text = orderName;
+            
+            
+           
+
+            txbLivreComDvd.Enabled = false;
+
+            globalSelected = false;
 
             
-
-            // disabled the input of the name of the order
-            txbCommandeIdDvd.Enabled = false;
 
             btnCommandeAjouterDvd.Enabled = true;
             btnCommandeModifierDvd.Enabled = false;
@@ -1964,10 +2020,17 @@ namespace MediaTekDocuments.view
             }
             else
             {
-                // delete the order
-                controller.deleteOrder(txbCommandeIdDvd.Text);
-                fillOrdersFullListDvd();
-                MessageBox.Show("La commande a été supprimée avec succès", "Suppression de commande");
+                // delete the order with a confirmation message
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment supprimer cette commande ?", "Suppression de commande", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    controller.deleteOrder(txbCommandeIdDvd.Text);
+                    fillOrdersFullListDvd();
+                    MessageBox.Show("La commande a été supprimée avec succès", "Suppression de commande");
+
+                    // nouvelle commande
+                    btnCommandeNouveauDvd_Click(sender, e);
+                }
             }
             
         }
@@ -1985,19 +2048,6 @@ namespace MediaTekDocuments.view
             cbxStatutDvd.SelectedIndex = -1;
         }
 
-        ///<summary>
-        /// fill the status combo
-        /// </summary>
-        private void fillStatusComboDvd()
-        {
-            List<Suivi> etats = controller.GetAllStatus();
-            bdgCommandesDvd.DataSource = etats;
-            cbxStatutDvd.DataSource = bdgCommandesDvd;
-            cbxStatutDvd.ValueMember = "statut";
-            // disable the input of the status combo
-            cbxStatutDvd.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
-
         /// <summary>
         /// clear the search and filter zones
         /// </summary>
@@ -2008,6 +2058,37 @@ namespace MediaTekDocuments.view
             cbxBooksRayonsDvd.SelectedIndex = -1;
             cbxBooksPublicsDvd.SelectedIndex = -1;
             txbBooksTitleSearchDvd.Text = "";
+        }
+
+        /// <summary>
+        /// tri sur les colonnes de la liste des commandes de dvd
+        /// </summary>
+        private void dgvOrdersListDvd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string titreColonne = dgvOrdersListDvd.Columns[e.ColumnIndex].HeaderText;
+            List<CommandeDocument> sortedList = new List<CommandeDocument>();
+            switch (titreColonne)
+            {
+                case "id":
+                    sortedList = controller.GetAllCommandeDocumentsDvd().OrderBy(o => o.id).ToList();
+                    break;
+                case "dateCommande":
+                    sortedList = controller.GetAllCommandeDocumentsDvd().OrderBy(o => o.dateCommande).ToList();
+                    break;
+                case "montant":
+                    sortedList = controller.GetAllCommandeDocumentsDvd().OrderBy(o => o.montant).ToList();
+                    break;
+                case "nbExemplaire":
+                    sortedList = controller.GetAllCommandeDocumentsDvd().OrderBy(o => o.nbExemplaire).ToList();
+                    break;
+                case "statut":
+                    sortedList = controller.GetAllCommandeDocumentsDvd().OrderBy(o => o.statut).ToList();
+                    break;
+                case "titre":
+                    sortedList = controller.GetAllCommandeDocumentsDvd().OrderBy(o => o.titre).ToList();
+                    break;
+            }
+            fillOrdersListDvd(sortedList);
         }
 
 
@@ -2028,7 +2109,7 @@ namespace MediaTekDocuments.view
             int orderCount = controller.GetOrderCount();
             if (orderCount == 0)
             {
-                globalSelected = false;
+              
                 emptyOrderZoneDvd();
                 txbCommandeIdDvd.Enabled = true;
                 dtpCommandeDateDvd.Enabled = true;
@@ -2040,11 +2121,6 @@ namespace MediaTekDocuments.view
                 cbxStatutDvd.SelectedIndex = 0;
                 cbxStatutDvd.Enabled = false;
 
-                // set the name of the order
-                string orderName = controller.SetNameOrder(false);
-                txbCommandeIdDvd.Text = orderName;
-
-
 
                 // disabled the input of the name of the order
                 txbCommandeIdDvd.Enabled = false;
@@ -2052,7 +2128,7 @@ namespace MediaTekDocuments.view
                 btnCommandeAjouterDvd.Enabled = true;
                 btnCommandeModifierDvd.Enabled = false;
                 btnCommandeSupprimerDvd.Enabled = false;
-                btnCommandeNouvelleDvd.Enabled = false;
+            
             }
             List<CommandeDocument> commandeDocuments = controller.GetAllCommandeDocumentsDvd();
             fillOrdersListDvd(commandeDocuments);
@@ -2064,25 +2140,16 @@ namespace MediaTekDocuments.view
         /// <param name="commandeDocuments">liste de commandes</param>
         private void fillOrdersListDvd(List<CommandeDocument> commandeDocuments)
         {
-            // Effacer les colonnes existantes
-            dgvOrdersListDvd.Columns.Clear();
-
-            // Ajouter les colonnes nécessaires
-            dgvOrdersListDvd.Columns.Add("Id", "Nom");
-            dgvOrdersListDvd.Columns.Add("DateCommande", "Date de commande");
-            dgvOrdersListDvd.Columns.Add("Montant", "Montant");
-            dgvOrdersListDvd.Columns.Add("NbExemplaire", "Nombre d'exemplaires");
-            dgvOrdersListDvd.Columns.Add("DvdCom", "Dvd commandé");
-            dgvOrdersListDvd.Columns.Add("Statut", "Statut");
-
-            // Remplir les lignes avec les données de la liste commandeDocuments
-            foreach (var commande in commandeDocuments)
-            {
-                Commande currentCommande = controller.retrieveCommandeById(commande.id);
-                Document dvd = controller.retrieveDocumentById(commande.idLivreDvd);
-                string titleDvd = dvd.Titre;
-                dgvOrdersListDvd.Rows.Add(commande.id, currentCommande.dateCommande.ToShortDateString(), currentCommande.montant, commande.nbExemplaire, titleDvd ,commande.statut);
-            }
+            bdgCommandesDvd.DataSource = commandeDocuments;
+            dgvOrdersListDvd.DataSource = bdgCommandesDvd;
+            dgvOrdersListDvd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            // set the id to 0 
+            dgvOrdersListDvd.Columns["id"].DisplayIndex = 0;
+            dgvOrdersListDvd.Columns["dateCommande"].DisplayIndex = 1;
+            dgvOrdersListDvd.Columns["montant"].DisplayIndex = 2;
+            dgvOrdersListDvd.Columns["nbExemplaire"].DisplayIndex = 3;
+            dgvOrdersListDvd.Columns["statut"].DisplayIndex = 4;
+            dgvOrdersListDvd.Columns["idLivreDvd"].Visible = false;
         }
 
         /// <summary>
@@ -2093,7 +2160,6 @@ namespace MediaTekDocuments.view
         {
             bdgDvdListe.DataSource = dvd;
             dgvLivresCmdDvd.DataSource = bdgDvdListe;
-            
             dgvLivresCmdDvd.Columns["idRayon"].Visible = false;
             dgvLivresCmdDvd.Columns["idGenre"].Visible = false;
             dgvLivresCmdDvd.Columns["idPublic"].Visible = false;
@@ -2285,7 +2351,7 @@ namespace MediaTekDocuments.view
         #endregion
 
         #region Onglet Commandes de Revues
-
+        private readonly BindingSource bdgCommandesRevue = new BindingSource();
 
 
 
@@ -2308,8 +2374,9 @@ namespace MediaTekDocuments.view
                 RemplirComboCategorie(controller.GetAllRayons(), bdgRayons, cbxBooksRayonsRevue);
                 fillBooksFullListRevue();
                 fillOrdersFullListRevue();
-                btnCommandeNouveauRevue_Click(sender, e);
                 commandeRelanceRevue();
+                // new order
+                btnCommandeNouveauRevue_Click(sender, e);
             }
         }
 
@@ -2318,54 +2385,51 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void dgvOrdersListRevue_SelectionChanged(object sender, EventArgs e)
         {
+
             if (dgvOrdersListRevue.CurrentCell != null)
             {
                 try
                 {
-                    string idCommande = (string)dgvOrdersListRevue.CurrentRow.Cells[0].Value;
-                    Abonnement abonnement = controller.retrieveAbonnementById(idCommande);
-                    Commande commande = controller.retrieveCommandeById(idCommande);
-                    txbCommandeIdRevue.Text = commande.id.ToString();
-                    dtpCommandeDateRevue.Value = commande.dateCommande;
-                    txbCommandeMontantRevue.Text = commande.montant.ToString();
+                    int id = dgvOrdersListRevue.Columns["id"].Index;
+                    string idStr = dgvOrdersListRevue.CurrentRow.Cells[id].Value.ToString();
+                    txbCommandeIdRevue.Text = idStr;
 
-                    // set the book title of selected line on the textboxlivrecom
-                    int id = dgvOrdersListRevue.Columns["RevueCom"].Index;
-                    txbLivreComRevue.Text = dgvOrdersListRevue.CurrentRow.Cells[id].Value.ToString();
-
-                    // set the date of the end of the abonnement
-                    dtpFinCommande.Value = abonnement.dateFinAbonnement;
-
-
-
+                   
                     // disable the fields
                     txbCommandeIdRevue.Enabled = false;
-                    dtpCommandeDateRevue.Enabled = false;
                     txbCommandeMontantRevue.Enabled = false;
                     txbLivreComRevue.Enabled = false;
-                    dtpFinCommande.Enabled = false;
-                   
+
+                    globalSelected = true;
 
                     // disabled the buttons
                     btnCommandeAjouterRevue.Enabled = false;
                     btnCommandeSupprimerRevue.Enabled = true;
-                    btnCommandeNouvelleRevue.Enabled = true;
 
-                    // set the value of cbxStatut to the global variable
+                    // retrieve the revue title with the order and write it in the txbLivreComRevue
+                    int idRevue = dgvOrdersListRevue.Columns["idRevue"].Index;
+                    string idRevueStr = dgvOrdersListRevue.CurrentRow.Cells[idRevue].Value.ToString();
+                    Revue revue = lesRevues.Find(x => x.Id.Equals(idRevueStr));
+                    txbLivreComRevue.Text = revue.Titre;
 
-                    // set the globalSelected to true
-                    globalSelected = true;
+                    // set the the value of montant in the textbox 
+                    int idMontant = dgvOrdersListRevue.Columns["montant"].Index;
+                    txbCommandeMontantRevue.Text = dgvOrdersListRevue.CurrentRow.Cells[idMontant].Value.ToString();
+
+
+
 
                 }
                 catch
                 {
-                    emptyOrderZoneRevue();
+
                 }
             }
             else
             {
-                emptyOrderZoneRevue();
+
             }
+
         }
 
         /// <summary>
@@ -2407,7 +2471,7 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void btnCommandeAjouterRevue_Click(object sender, EventArgs e)
         {
-            
+            string name = "R" + txbCommandeIdRevue.Text;
             DateTime lastDateExemplaire = controller.setDateFinAbonnement(globalIdRevue);
 
             if (txbCommandeMontantRevue.Text == "")
@@ -2430,12 +2494,52 @@ namespace MediaTekDocuments.view
             {
                 MessageBox.Show("La date de fin de l'abonnement doit être après la date de commande");
             }
+            else if (controller.OrderExist(txbCommandeIdRevue.Text) == true)
+            {
+                MessageBox.Show("La commande existe déjà");
+            }
+            else if (txbCommandeIdRevue.Text.Length > 4)
+            {
+                MessageBox.Show("Le nom ne doit pas dépasser 4 caractères");
+            }
+            else if (controller.OrderExist(name) == true)
+            {
+                MessageBox.Show("La commande existe déjà");
+            }
             else
             {
-                Abonnement abonnement = new Abonnement(txbCommandeIdRevue.Text, dtpCommandeDateRevue.Value, int.Parse(txbCommandeMontantRevue.Text), dtpFinCommande.Value, globalIdRevue); ;
+                Abonnement abonnement = new Abonnement(name, dtpCommandeDateRevue.Value, int.Parse(txbCommandeMontantRevue.Text), dtpFinCommande.Value, globalIdRevue, txbLivreComRevue.Text); ;
                 controller.AddAbonnement(abonnement);
                 fillOrdersFullListRevue();
             }
+        }
+
+        /// <summary>
+        /// tri sur les colonnes de la liste des commandes de revues
+        /// </summary>
+        private void dgvOrdersListRevue_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string titreColonne = dgvOrdersListRevue.Columns[e.ColumnIndex].HeaderText;
+            List<Abonnement> sortedList = new List<Abonnement>();
+            switch (titreColonne)
+            {
+                case "id":
+                    sortedList = controller.GetAllAbonnements().OrderBy(o => o.id).ToList();
+                    break;
+                case "dateCommande":
+                    sortedList = controller.GetAllAbonnements().OrderBy(o => o.dateCommande).ToList();
+                    break;
+                case "montant":
+                    sortedList = controller.GetAllAbonnements().OrderBy(o => o.montant).ToList();
+                    break;
+                case "dateFinAbonnement":
+                    sortedList = controller.GetAllAbonnements().OrderBy(o => o.dateFinAbonnement).ToList();
+                    break;
+                case "titre":
+                    sortedList = controller.GetAllAbonnements().OrderBy(o => o.titre).ToList();
+                    break;
+            }
+            fillOrdersListRevue(sortedList);
         }
 
         /// <summary>
@@ -2460,6 +2564,7 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void commandeRelanceRevue()
         {
+            int compteur = 0;
             List<Abonnement> abonnements = controller.GetAllAbonnements();
             List<Abonnement> abonnementsRelance = new List<Abonnement>();
             foreach (var abonnement in abonnements)
@@ -2476,10 +2581,13 @@ namespace MediaTekDocuments.view
             {   
                 abonnementsRelanceString += abonnement.id + " - Date de fin : " + abonnement.dateFinAbonnement.ToShortDateString();
                 abonnementsRelanceString += "\n";
+                compteur++;
             }
-            MessageBox.Show(abonnementsRelanceString, "Abonnements se terminant dans moins de 30 jours");
             
-            
+            if (compteur > 0)
+            {
+                MessageBox.Show(abonnementsRelanceString, "Abonnements se terminant dans moins de 30 jours");
+            }
         }
 
 
@@ -2499,21 +2607,21 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void btnCommandeNouveauRevue_Click(object sender, EventArgs e)
         {
-            globalSelected = false;
+            
+
             emptyOrderZoneRevue();
             txbCommandeIdRevue.Enabled = true;
             dtpCommandeDateRevue.Enabled = true;
             txbCommandeMontantRevue.Enabled = true;
             dtpFinCommande.Enabled = true;
         
-            // set the name of the order
-            string orderName = controller.SetNameOrderRevue();
-            txbCommandeIdRevue.Text = orderName;
+          
+    
+            txbLivreComRevue.Enabled = false;
 
+            globalSelected = false;
 
-
-            // disabled the input of the name of the order
-            txbCommandeIdRevue.Enabled = false;
+           
 
             btnCommandeAjouterRevue.Enabled = true;
             btnCommandeSupprimerRevue.Enabled = false;
@@ -2561,28 +2669,21 @@ namespace MediaTekDocuments.view
             int orderCount = controller.GetOrderCount();
             if (orderCount == 0)
             {
-                globalSelected = false;
+               
                 emptyOrderZoneRevue();
                 txbCommandeIdRevue.Enabled = true;
                 dtpCommandeDateRevue.Enabled = true;
                 txbCommandeMontantRevue.Enabled = true;
                 txbLivreComRevue.Enabled = false;
 
-                
-
-                // set the name of the order
-                string orderName = controller.SetNameOrder(false);
-                txbCommandeIdRevue.Text = orderName;
-
-
-
+               
                 // disabled the input of the name of the order
                 txbCommandeIdRevue.Enabled = false;
                 
 
                 btnCommandeAjouterRevue.Enabled = true;
                 btnCommandeSupprimerRevue.Enabled = false;
-                btnCommandeNouvelleRevue.Enabled = false;
+                
             }
             List<Abonnement> abonnement = controller.GetAllAbonnements();
             fillOrdersListRevue(abonnement);
@@ -2596,24 +2697,21 @@ namespace MediaTekDocuments.view
         /// <param name="abonnement">liste de commandes</param>
         private void fillOrdersListRevue(List<Abonnement> abonnement)
         {
-            // Effacer les colonnes existantes
-            dgvOrdersListRevue.Columns.Clear();
+            bdgCommandesRevue.DataSource = abonnement;
+            dgvOrdersListRevue.DataSource = bdgCommandesRevue;
+            dgvOrdersListRevue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            // set the id to 0 
+            dgvOrdersListRevue.Columns["id"].DisplayIndex = 0;
+            dgvOrdersListRevue.Columns["dateFinAbonnement"].DisplayIndex = 1;
+            dgvOrdersListRevue.Columns["montant"].DisplayIndex = 2;
+            dgvOrdersListRevue.Columns["dateCommande"].DisplayIndex = 3;
+            dgvOrdersListRevue.Columns["titre"].DisplayIndex = 4;
 
-            // Ajouter les colonnes nécessaires
-            dgvOrdersListRevue.Columns.Add("Id", "Nom");
-            dgvOrdersListRevue.Columns.Add("DateCommande", "Date de commande");
-            dgvOrdersListRevue.Columns.Add("Montant", "Montant");
-            dgvOrdersListRevue.Columns.Add("DateFinAbonnement", "Date de fin");
-            dgvOrdersListRevue.Columns.Add("RevueCom", "Revue commandé");
 
-            // Remplir les lignes avec les données de la liste commandeDocuments
-            foreach (var commande in abonnement)
-            {
-                Commande currentCommande = controller.retrieveCommandeById(commande.id);
-                Document Revue = controller.retrieveDocumentById(commande.idRevue);
-                string titleRevue = Revue.Titre;
-                dgvOrdersListRevue.Rows.Add(commande.id, currentCommande.dateCommande.ToShortDateString(), currentCommande.montant, commande.dateFinAbonnement.ToShortDateString(), titleRevue);
-            }
+            // hide the idLivre column
+            dgvOrdersListRevue.Columns["idRevue"].Visible = false;
+
+
         }
 
         /// <summary>
@@ -2785,10 +2883,17 @@ namespace MediaTekDocuments.view
             }
             else
             {
-                // delete the order
-                controller.deleteOrder(txbCommandeIdRevue.Text);
-                fillOrdersFullListRevue();
-                MessageBox.Show("La commande a été supprimée avec succès", "Suppression de commande");
+                // delete the order with a confirmation message
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous vraiment supprimer cette commande ?", "Suppression de commande", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    controller.deleteOrder(txbCommandeIdRevue.Text);
+                    fillOrdersFullListRevue();
+                    MessageBox.Show("La commande a été supprimée avec succès", "Suppression de commande");
+
+                    // nouvelle commande
+                    btnCommandeNouveauRevue_Click(sender, e);
+                }
             }
         }
 
@@ -2922,6 +3027,11 @@ namespace MediaTekDocuments.view
         }
 
         private void FrmMediatek_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label86_Click(object sender, EventArgs e)
         {
 
         }

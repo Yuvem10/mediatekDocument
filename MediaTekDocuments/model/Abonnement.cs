@@ -11,10 +11,13 @@ namespace MediaTekDocuments.model
         public DateTime dateFinAbonnement { get; }
         public string idRevue { get; }
 
-        public Abonnement(string id, DateTime dateCommande, float montant, DateTime dateFinAbonnement, string idRevue) : base(id, dateCommande, montant)
+        public string titre { get; }
+
+        public Abonnement(string id, DateTime dateCommande, float montant, DateTime dateFinAbonnement, string idRevue, string titre) : base(id, dateCommande, montant)
         {
             this.dateFinAbonnement = dateFinAbonnement;
             this.idRevue = idRevue;
+            this.titre = titre;
         }
     }
 }

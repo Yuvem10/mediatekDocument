@@ -1951,6 +1951,7 @@ namespace MediaTekDocuments.view
             this.dgvOrdersList.Size = new System.Drawing.Size(501, 311);
             this.dgvOrdersList.TabIndex = 17;
             this.dgvOrdersList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdersList_CellContentClick);
+            this.dgvOrdersList.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvOrdersList_ColumnHeaderMouseClick);
             this.dgvOrdersList.SelectionChanged += new System.EventHandler(this.dgvOrdersList_SelectionChanged);
             // 
             // groupBox2
@@ -2327,6 +2328,7 @@ namespace MediaTekDocuments.view
             this.dgvOrdersListDvd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdersListDvd.Size = new System.Drawing.Size(501, 311);
             this.dgvOrdersListDvd.TabIndex = 17;
+            this.dgvOrdersListDvd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvOrdersListDvd_ColumnHeaderMouseClick);
             this.dgvOrdersListDvd.SelectionChanged += new System.EventHandler(this.dgvOrdersListDvd_SelectionChanged);
             // 
             // groupBox5
@@ -2880,6 +2882,7 @@ namespace MediaTekDocuments.view
             this.dgvOrdersListRevue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdersListRevue.Size = new System.Drawing.Size(501, 311);
             this.dgvOrdersListRevue.TabIndex = 17;
+            this.dgvOrdersListRevue.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvOrdersListRevue_ColumnHeaderMouseClick);
             this.dgvOrdersListRevue.SelectionChanged += new System.EventHandler(this.dgvOrdersListRevue_SelectionChanged);
             // 
             // groupBox7
@@ -2929,15 +2932,16 @@ namespace MediaTekDocuments.view
             // label86
             // 
             this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(12, 140);
+            this.label86.Location = new System.Drawing.Point(6, 140);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(131, 13);
             this.label86.TabIndex = 39;
-            this.label86.Text = "Date fin de la commande :";
+            this.label86.Text = "Date fin de l\'abonnement :";
+            this.label86.Click += new System.EventHandler(this.label86_Click);
             // 
             // dtpFinCommande
             // 
-            this.dtpFinCommande.Location = new System.Drawing.Point(145, 136);
+            this.dtpFinCommande.Location = new System.Drawing.Point(149, 140);
             this.dtpFinCommande.Name = "dtpFinCommande";
             this.dtpFinCommande.Size = new System.Drawing.Size(186, 20);
             this.dtpFinCommande.TabIndex = 38;
