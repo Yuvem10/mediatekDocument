@@ -75,3 +75,26 @@ Ce mode opératoire permet d'installer l'application pour pouvoir travailler des
 - Installer Visual Studio 2019 entreprise et les extension Specflow et newtonsoft.json (pour ce dernier, voir l'article "Accéder à une API REST à partir d'une application C#" dans le wiki de ce dépôt : consulter juste le début pour la configuration, car la suite permet de comprendre le code existant).<br>
 - Télécharger le code et le dézipper puis renommer le dossier en "mediatekdocuments".<br>
 - Récupérer et installer l'API REST nécessaire (https://github.com/CNED-SLAM/rest_mediatekdocuments) ainsi que la base de données (les explications sont données dans le readme correspondant).
+
+
+### Commandes de livres et de dvd
+Voici l'interface de commande de livre et de dvd (ici l'exemple des livres mais c'est la même) 
+![Screenshot 2024-04-19 120518](https://github.com/Yuvem10/mediatekDocuments/assets/116307236/ddc0d892-4549-4a9d-980f-a9af0673bed6)
+
+Pour consulter les commandes il suffit de cliquer dans le tableau de droite et les informations de la commande sélectionnée seront disponibles dans les champs de texte correspondant. 
+Pour ajouter une nouvelle commande il suffit d'appuyer sur le bouton "nouvelle commande" les champs textes deviennent remplissables avec les informations de la nouvelle commande. 
+Le livre doit être sélectionné dans le tableau des livres dessous. 
+Pour modifier il suffit de cliquer sur une commande que l'on souhaite modifier et de changer le statut de la commande (seule cette option est modifiable) et ensuite appuyer sur "modifier la commande". 
+Pour supprimer il suffit juste d'appuyer sur le bouton "supprimer" de la colonne selectionné que l'on veut supprimer. 
+
+### Commandes de revues
+Voici l'interface des commandes de revues sur abonnement
+
+![Screenshot 2024-04-19 120527](https://github.com/Yuvem10/mediatekDocuments/assets/116307236/fe24377a-3423-4caf-aebb-35286b1705dd)
+
+C'est exactement le même principe sauf que la modification n'est pas possible et qu'il est possible d'afficher uniquement les abonnements prenant fin dans moins de 30 jours. 
+
+### Authentification
+Voici l'interface de l'authentification 
+
+![Screenshot 2024-04-19 120539](https://github.com/Yuvem10/mediatekDocuments/assets/116307236/a83097f3-7e10-4d10-a586-c0fa0049d395)
